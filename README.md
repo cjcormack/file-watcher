@@ -59,6 +59,8 @@ The following are things that I would have given more attention to if more time 
   is partial support for each `watcher` watching multiple folders, and I anticipated that this, when mixed with multiple
   `watcher`s, would have given the platform a lot of capacity. (If this was a proper submission, I'd have probably aimed
   to finish the multiple folders bit).
+* Efficiency. At the moment, the `watcher`s always send the full file list. To aid handling large folders with small change
+  counts, it would be useful to send a diff containing the changes.
 * Authentication. Currently the `master` and `watcher`s blindly trust each other.
 * Plain text. Currently all of the data is transmitted in plain text (well JSON) over HTTP.
 * Discovery. Getting the `watcher`s to automatically discover the `master` would have been an interesting bit to investigate.

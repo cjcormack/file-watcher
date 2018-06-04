@@ -73,10 +73,10 @@ this was a proper submission, I would have sorted this out!).
 * Robustness. While I am hopeful that I have made some aspects of this solution robust enough, there are a few things
   that I haven't tested and I suspect at least one of them will break things (once again, I would have looked to fix these
   if it was a real submission):
-** Watched folder deleted while `watcher` running—I am quite sure that something will break badly here,
-** Folder name with spaces—I am pretty hopeful that this will work fine,
-** Folder supplied as absolute path—I am hopeful, but wouldn't be surprised either way,
-** Stale connections on `master`—I am not quite sure how this would be triggerable (if my testing the `master` was pretty
-   good at noticing that the `watcher` had disconnected). Basically, I'd like to add some form of polling from `master` to
-   the `watcher`s, possibly as a "I haven't had an update it a while. Could you send me the latest?" type request (which
-   would kill the connection if it doesn't get a timely response).
+   * Watched folder deleted while `watcher` running—I am quite sure that something will break badly here,
+   * Folder name with spaces—I am pretty hopeful that this will work fine,
+   * Folder supplied as absolute path—I am hopeful, but wouldn't be surprised either way,
+   * Stale connections on `master`—I am not quite sure how this would be triggerable (if my testing the `master` was pretty
+     good at noticing that the `watcher` had disconnected). Basically, I'd like to add some form of polling from `master` to
+     the `watcher`s, possibly as a "I haven't had an update it a while. Could you send me the latest?" type request (which
+     would kill the connection if it doesn't get a timely response).

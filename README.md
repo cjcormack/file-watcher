@@ -70,6 +70,8 @@ I was planning on refactoring things to make it easy to switch in a different tr
 this was a proper submission, I would have sorted this out!).
 * Refactoring. There're a couple of places where I'd have been a lot happier if I'd given the code a further further refactor
 (again, I'd have sorted this out if this was a real submission!).
+* Comments. I intended to go through and add comments (especially godoc bits). I definitely would have done if this was a
+  real thing. 
 * Robustness. While I am hopeful that I have made some aspects of this solution robust enough, there are a few things
   that I haven't tested and I suspect at least one of them will break things (once again, I would have looked to fix these
   if it was a real submission):

@@ -15,7 +15,7 @@ import (
 	"os/signal"
 )
 
-var addr = flag.String("addr", "localhost:8080", "http service address")
+var masterAddr = flag.String("masterAddr", "localhost:8080", "http service address")
 var path = flag.String("folder", "", "Path to the folder to watch")
 
 func main() {
@@ -33,7 +33,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	conn := socket.New(*addr, "/watchers/notifications")
+	conn := socket.New(*masterAddr, "/watchers/notifications")
 	conn.SetConnectHandler(connectionHandler(watcher, conn, []*fswatcher.Folder{watchedFolder}))
 	conn.SetDisconnectHandler(disconnectionHandler(watcher))
 
